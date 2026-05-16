@@ -1,0 +1,355 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.site-header .navbar {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-header .nav-link {
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.site-header .navbar-brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+@media (min-width: 992px) {
+  .navbar-shell {
+    position: relative;
+  }
+
+  .navbar-shell .navbar-collapse {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .navbar-nav--main {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+  }
+
+  .navbar-nav--utilities {
+    margin-left: auto;
+  }
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.login-card {
+  background: var(--color-glass);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+.login-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.login-form .form-label {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin-bottom: 0.25rem;
+}
+
+.login-form .form-control {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: var(--color-white);
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.85rem;
+}
+
+.login-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.login-form .form-control:focus {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 0.15rem rgba(249, 200, 110, 0.25);
+}
+
+/* Field states: neutral | valid | invalid */
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.field-input-wrap {
+  position: relative;
+}
+
+.field-row > .field-control,
+.field-input-wrap {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-row > .field-control,
+.field-input-wrap .field-control {
+  width: 100%;
+}
+
+.field-input-wrap .field-control {
+  padding-right: 2.75rem;
+}
+
+.field-status-icons {
+  flex-shrink: 0;
+  width: 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-status-icons .field-icon {
+  display: none;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.field-status-icons .field-icon--valid {
+  color: var(--color-success);
+}
+
+.field-status-icons .field-icon--invalid {
+  color: var(--color-error);
+}
+
+.field-action {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  color: var(--color-white);
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field-action:hover,
+.field-action:focus {
+  color: var(--color-gold);
+}
+
+.field-action .bi {
+  font-size: 1.1rem;
+}
+
+.field-message {
+  display: none;
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+}
+
+.field-group[data-state="valid"] .field-control {
+  border-color: var(--color-success);
+}
+
+.field-group[data-state="valid"] .field-icon--valid {
+  display: inline-block;
+}
+
+.field-group[data-state="valid"] .field-message--valid {
+  display: block;
+  color: var(--color-success);
+}
+
+.field-group[data-state="invalid"] .field-control {
+  border-color: var(--color-error);
+}
+
+.field-group[data-state="invalid"] .field-icon--invalid {
+  display: inline-block;
+}
+
+.field-group[data-state="invalid"] .field-message--invalid {
+  display: block;
+  color: var(--color-error);
+}
+
+.password-toggle {
+  cursor: pointer;
+}
+
+.login-form .form-check-label,
+.link-forgot {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  text-decoration: none;
+}
+
+.link-forgot:hover {
+  color: var(--color-gold);
+}
+
+.login-form .form-check-input {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.login-form .form-check-input:checked {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.btn-gold {
+  background: var(--color-gold);
+  color: var(--color-black);
+  font-weight: 700;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+  background: var(--color-gold-dark);
+  color: var(--color-black);
+}
+
+.btn-social {
+  background: var(--color-white);
+  color: var(--color-black);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-social:hover {
+  background: #f0f0f0;
+  color: var(--color-black);
+}
+
+.login-card__footer {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.login-card__footer a {
+  text-decoration: none;
+}
+
+.login-card__footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer h6 {
+  color: var(--color-gold);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.site-footer a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--color-gold);
+}
+
+.site-footer .footer-links li {
+  margin-bottom: 0.35rem;
+}
+
+.site-footer .subscribe-label {
+  color: var(--color-white);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+.site-footer .form-control:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-gold);
+  color: var(--color-white);
+  box-shadow: none;
+}
+
+.btn-subscribe {
+  background: var(--color-gold);
+  color: var(--color-black);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  padding: 0.35rem 1rem;
+  border: none;
+  white-space: nowrap;
+}
+
+.btn-subscribe:hover {
+  background: var(--color-gold-dark);
+  color: var(--color-black);
+}
+
+.connect-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.social-icons a {
+  color: var(--color-white);
+  font-size: 1.1rem;
+}
+
+.social-icons a:hover {
+  color: var(--color-gold);
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.7rem;
+}
+
+.footer-legal a:hover {
+  color: var(--color-gold);
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.7rem;
+}

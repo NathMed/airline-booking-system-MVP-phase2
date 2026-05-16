@@ -1,0 +1,16 @@
+:root {
+  --color-gold: #f9c86e;
+  --color-gold-dark: #d4a84a;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-error: #ff4d4f;
+  --color-success: #4caf50;
+  --color-muted: rgba(255, 255, 255, 0.75);
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.22);
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --radius-card: 1rem;
+  --blur-glass: 24px;
+}

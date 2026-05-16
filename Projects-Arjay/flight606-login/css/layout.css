@@ -1,0 +1,82 @@
+.page-login {
+  font-family: var(--font-sans);
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Hero background: add your image at assets/hero-cabin.jpg (see index.html comment) */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background-color: #1a1208;
+  background-image:
+    url("../assets/hero-cabin.png"),
+    url("https://images.unsplash.com/photo-1556388151-efab48a84f7a?auto=format&fit=crop&w=1920&q=80");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-script {
+  font-family: var(--font-script);
+  color: var(--color-gold);
+  font-size: 1.4em;
+  font-weight: 400;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.hero-quote {
+  margin-top: 4rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  max-width: 28rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  background: var(--color-black);
+  padding: 3rem 0 1.5rem;
+}
+
+@media (max-width: 991.98px) {
+  .hero-quote {
+    display: none;
+  }
+
+  .hero-section {
+    min-height: auto;
+  }
+}

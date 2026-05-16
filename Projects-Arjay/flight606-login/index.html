@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight606 — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/variables.css" rel="stylesheet">
+  <link href="css/layout.css" rel="stylesheet">
+  <link href="css/components.css" rel="stylesheet">
+</head>
+<body class="page-login">
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4 navbar-shell">
+        <a class="navbar-brand" href="#">FLIGHT606</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav navbar-nav--main gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#">Plan Trip</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Travel Info</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Corporate Travel</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Travel Services</a></li>
+          </ul>
+          <ul class="navbar-nav navbar-nav--utilities align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-1" href="#">
+                <i class="bi bi-flag-fill"></i> EN
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-1" href="#">
+                <i class="bi bi-question-circle"></i> AskPH
+              </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="Search"><i class="bi bi-search"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="Account"><i class="bi bi-person-circle"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Background image: place file at assets/hero-cabin.jpg (1920px+ wide recommended) -->
+  <main class="hero-section">
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center min-vh-100 py-5 pt-lg-5">
+        <div class="col-lg-7 text-white hero-copy pe-lg-5">
+          <h1 class="hero-title">
+            Paradise <span class="hero-script">Awaits</span> Your Arrival
+          </h1>
+          <p class="hero-subtitle">
+            Your Exclusive Gateway to <span class="text-gold">First-class</span> Journey
+          </p>
+          <blockquote class="hero-quote mb-0">
+            “<span class="text-gold">Flight606</span> is the only Airline where the journey becomes your destination”
+            — Manny Paksiw
+          </blockquote>
+        </div>
+
+        <div class="col-lg-5 mt-5 mt-lg-0">
+          <div class="login-card">
+            <h2 class="login-card__title">
+              Ready for your next Adventure? Login to your <span class="text-gold">Account</span>
+            </h2>
+            <form class="login-form" action="#" method="post" novalidate>
+              <div class="field-group mb-3" id="email-group" data-state="neutral">
+                <label class="form-label" for="email">Email</label>
+                <div class="field-row">
+                  <input type="email" id="email" name="email" class="form-control field-control" placeholder="Enter your email" autocomplete="email">
+                  <span class="field-status-icons" aria-hidden="true">
+                    <i class="bi bi-check-circle-fill field-icon field-icon--valid"></i>
+                    <i class="bi bi-exclamation-circle-fill field-icon field-icon--invalid"></i>
+                  </span>
+                </div>
+                <p class="field-message field-message--valid" role="status">Email format looks good</p>
+                <p class="field-message field-message--invalid" role="alert">Please enter a valid email address</p>
+              </div>
+              <div class="field-group mb-3" id="password-group" data-state="neutral">
+                <label class="form-label" for="password">Password</label>
+                <div class="field-row">
+                  <div class="field-input-wrap">
+                    <input type="password" id="password" name="password" class="form-control field-control" placeholder="Enter password" autocomplete="current-password">
+                    <button type="button" class="field-action password-toggle" aria-label="Show password">
+                      <i class="bi bi-eye"></i>
+                    </button>
+                  </div>
+                  <span class="field-status-icons" aria-hidden="true">
+                    <i class="bi bi-check-circle-fill field-icon field-icon--valid"></i>
+                    <i class="bi bi-exclamation-circle-fill field-icon field-icon--invalid"></i>
+                  </span>
+                </div>
+                <p class="field-message field-message--valid" role="status">Password meets requirements</p>
+                <p class="field-message field-message--invalid" role="alert">Password must be at least 8 characters</p>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="remember" name="remember">
+                  <label class="form-check-label" for="remember">Remember me</label>
+                </div>
+                <a href="#" class="link-forgot">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-gold w-100 mb-3">Login now</button>
+              <button type="button" class="btn btn-social w-100 mb-2">
+                <i class="bi bi-google"></i>
+                Continue with Google
+              </button>
+              <button type="button" class="btn btn-social w-100">
+                <i class="bi bi-apple"></i>
+                Continue with Apple
+              </button>
+            </form>
+            <p class="login-card__footer text-center mt-4 mb-0">
+              Don't have an account? <a href="#" class="text-gold fw-semibold">Sign Up</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h6>Other Offerings</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Flight Deals</a></li>
+            <li><a href="#">Hotels &amp; Resorts</a></li>
+            <li><a href="#">Car Rentals</a></li>
+            <li><a href="#">Travel Insurance</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6>About Us</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press Room</a></li>
+            <li><a href="#">Sustainability</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6>Support</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Baggage Info</a></li>
+            <li><a href="#">Flight Status</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <p class="subscribe-label mb-2">Subscribe to our offers</p>
+          <div class="input-group input-group-sm mb-4">
+            <input type="email" class="form-control" placeholder="Your email" aria-label="Email for subscription">
+            <button class="btn btn-subscribe" type="button">Subscribe</button>
+          </div>
+          <p class="connect-label text-uppercase mb-2">Connect with us</p>
+          <div class="d-flex gap-3 social-icons">
+            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25 my-4">
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 footer-legal">
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#">Legal</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+          <a href="#">Accessibility</a>
+        </div>
+        <span class="footer-copyright">© 2026 Flight606. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
