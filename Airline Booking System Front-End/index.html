@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight606 – Luxury Redefined</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="./index.css">
+
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo" onclick="showPage('home');return false;">Flight<span>606</span></a>
+    <ul class="nav-links">
+      <li><a href="#" class="active" onclick="showPage('home');setActive(this);return false;">Home</a></li>
+      <li><a href="#" onclick="showPage('home');setActive(this);scrollToSection('tours');return false;">Tour Plan</a></li>
+      <li><a href="#" onclick="showPage('home');setActive(this);scrollToSection('about');return false;">About Us</a></li>
+      <li><a href="#" onclick="showPage('home');setActive(this);return false;">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-btn nav-btn-outline" onclick="showPage('login')">Login</button>
+      <button class="nav-btn nav-btn-fill" onclick="showPage('signup')">Sign Up</button>
+    </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#" onclick="showPage('home');closeMobileMenu();return false;">Home</a>
+    <a href="#" onclick="showPage('home');closeMobileMenu();return false;">Tour Plan</a>
+    <a href="#" onclick="showPage('home');closeMobileMenu();return false;">About Us</a>
+    <a href="#" onclick="showPage('home');closeMobileMenu();return false;">Contact</a>
+    <a href="#" class="gold" onclick="showPage('login');closeMobileMenu();return false;">Login</a>
+    <a href="#" class="gold" onclick="showPage('signup');closeMobileMenu();return false;">Sign Up</a>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HOME PAGE
+  ══════════════════════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero -->
+    <div class="hero-bg">
+      <div class="home-hero">
+        <p class="home-tagline fade-up">Flight 606 · Luxury Redefined</p>
+        <h1 class="home-title fade-up-2">
+          Paradise <em>Awaits</em><br>Your Arrival
+        </h1>
+        <p class="home-subtitle fade-up-3">Your Exclusive Gateway to <span style="color:var(--gold)">First-class</span> Journey</p>
+
+        <!-- Booking Widget -->
+        <div class="booking-widget fade-up-3">
+          <div class="widget-tabs">
+            <button class="widget-tab active" onclick="setTab(this,'buy')">Buy Tickets</button>
+            <button class="widget-tab" onclick="setTab(this,'status')">Check Flight Status</button>
+          </div>
+          <div id="tab-buy">
+            <div class="trip-type">
+              <label class="radio-label"><input type="radio" name="trip" value="one" checked> One way</label>
+              <label class="radio-label"><input type="radio" name="trip" value="round"> Round trip</label>
+              <label class="radio-label"><input type="radio" name="trip" value="multi"> Multi-city</label>
+            </div>
+            <div class="widget-row">
+              <div class="field-group">
+                <label class="field-label">From</label>
+                <select class="field-input">
+                  <option value="">Select Departure…</option>
+                  <option>Manila (MNL)</option>
+                  <option>Cebu (CEB)</option>
+                  <option>Davao (DVO)</option>
+                  <option>Singapore (SIN)</option>
+                  <option>Tokyo (TYO)</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label class="field-label">To</label>
+                <select class="field-input">
+                  <option value="">Select Destination…</option>
+                  <option>Paris (CDG)</option>
+                  <option>Tokyo (NRT)</option>
+                  <option>Maldives (MLE)</option>
+                  <option>Geneva (GVA)</option>
+                  <option>New York (JFK)</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label class="field-label">Departure Date</label>
+                <input type="date" class="field-input">
+              </div>
+              <div class="field-group">
+                <label class="field-label">Passengers</label>
+                <select class="field-input">
+                  <option>1 Adult</option>
+                  <option selected>2 Adults</option>
+                  <option>3 Adults</option>
+                  <option>2 Adults, 1 Child</option>
+                  <option>2 Adults, 2 Children</option>
+                </select>
+              </div>
+              <button class="book-btn" onclick="showPage('home')">Book Now</button>
+            </div>
+          </div>
+          <div id="tab-status" style="display:none">
+            <div class="widget-row" style="grid-template-columns:1fr 1fr auto">
+              <div class="field-group">
+                <label class="field-label">Flight Number</label>
+                <input type="text" class="field-input" placeholder="e.g. F606 001">
+              </div>
+              <div class="field-group">
+                <label class="field-label">Date</label>
+                <input type="date" class="field-input">
+              </div>
+              <button class="book-btn">Check Status</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="quote-strip">
+          <p class="quote-text">"Flight606 is the only Airline where the journey becomes your destination"</p>
+          <p class="quote-author">— Manny Paksiu</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tour Plan / Destinations -->
+    <section id="tours">
+      <div class="section-tag">Curated Routes</div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+        <h2 class="section-title">Tour <em>Plan</em></h2>
+        <a href="#" style="font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none">View All Routes →</a>
+      </div>
+      <div class="dest-grid">
+        <div class="dest-card">
+          <div class="dest-card-placeholder" style="background:linear-gradient(135deg,#1a1206,#3a2a0a)">🏙️</div>
+          <div class="dest-overlay">
+            <span class="dest-sub">The City of Lights</span>
+            <span class="dest-name">Paris</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-card-placeholder" style="background:linear-gradient(135deg,#061a12,#0a3022)">🏝️</div>
+          <div class="dest-overlay">
+            <span class="dest-sub">Ocean Sanctuary</span>
+            <span class="dest-name">Maldives</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-card-placeholder" style="background:linear-gradient(135deg,#0a0618,#18102e)">🗼</div>
+          <div class="dest-overlay">
+            <span class="dest-sub">Neon Meets Tradition</span>
+            <span class="dest-name">Tokyo</span>
+          </div>
+        </div>
+        <div class="dest-card">
+          <div class="dest-card-placeholder" style="background:linear-gradient(135deg,#061218,#0a2030)">🌴</div>
+          <div class="dest-overlay">
+            <span class="dest-sub">It's More Fun Here</span>
+            <span class="dest-name">Manila</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about-strip">
+      <div class="about-text">
+        <div class="section-tag">Curated Routes</div>
+        <h2 class="section-title" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Time is your most<br>precious <em>commodity.</em></h2>
+        <p>We believe the journey should be as remarkable as the destination. Flight606 was founded on a singular principle: to return the romance, privacy, and absolute comfort to transcontinental travel.</p>
+        <p>From private terminal departures to bespoke culinary programs crafted by michelin-starred chefs – every detail is engineered for those who demand nothing less than perfection.</p>
+        <a href="#" class="discover-link">Discover the Experience</a>
+      </div>
+      <div class="about-visual">✈</div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-bg">
+      <div class="testimonials-header">
+        <div class="section-tag" style="text-align:center">Distinguished Guests</div>
+        <h2 class="section-title">Whispers of <em>Excellence</em></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The only airline where I genuinely look forward to a 12-hour flight. The private suite and dining service rival the best hotels in the world."</p>
+          <p class="testi-author">— Eleanor R., London</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Flight606 has completely redefined business travel for me. Quiet, understated, and impeccably serviced. A masterclass in hospitality at altitude."</p>
+          <p class="testi-author">— Marcus T., New York</p>
+        </div>
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"From the chauffeur service to the arrivals lounge, it is a seamless cocoon of luxury. I simply refuse to fly any other way now."</p>
+          <p class="testi-author">— Sophia C., Geneva</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <p class="footer-col-title">Other Offerings</p>
+          <ul>
+            <li><a href="#">PHplus</a></li>
+            <li><a href="#">Temptations</a></li>
+            <li><a href="#">Zuitt Academy ↗</a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">About Us</p>
+          <ul>
+            <li><a href="#">Philippines Aviation Group</a></li>
+            <li><a href="#">Philippines Airlines Affiliate</a></li>
+            <li><a href="#">Corporate Governance</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Join us</a></li>
+            <li><a href="#">MH Media Centre</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Corporate Travel</p>
+          <ul>
+            <li><a href="#">PHcorporate</a></li>
+            <li><a href="#">PHcorporate SME</a></li>
+            <li><a href="#">PHcorporate MARINE</a></li>
+            <li><a href="#">PHcorporate EVENTS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">AskMH</p>
+          <ul>
+            <li><a href="#">FAQ ↗</a></li>
+            <li><a href="#">Contact Details</a></li>
+            <li><a href="#">Feedback</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Subscribe to our offers</p>
+          <div class="footer-subscribe">
+            <input type="email" class="subscribe-input" placeholder="your@email.com">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+          <p style="font-size:.65rem;color:var(--text-muted);margin-top:16px;letter-spacing:.08em;text-transform:uppercase">Connect With Us</p>
+          <div class="social-row">
+            <a href="#" class="social-icon">𝕏</a>
+            <a href="#" class="social-icon">📘</a>
+            <a href="#" class="social-icon">▶</a>
+            <a href="#" class="social-icon">📷</a>
+            <a href="#" class="social-icon">🎵</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <a href="#">Legal</a>
+          <a href="#">Privacy</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Terms and conditions</a>
+          <a href="#">Sales and Service Tax</a>
+          <a href="#">Philippines e-Invoice</a>
+        </div>
+        <span class="footer-copy">© Batch 606</span>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       LOGIN PAGE
+  ══════════════════════════════════════ -->
+  <div id="page-login" class="page">
+    <div class="hero-bg">
+      <div class="auth-page">
+        <div class="auth-content">
+          <div class="auth-left">
+            <p class="home-tagline">Flight 606 · Luxury Redefined</p>
+            <h1 class="home-title" style="margin-bottom:16px">
+              Paradise <em>Awaits</em><br>Your Arrival
+            </h1>
+            <p class="home-subtitle">Your Exclusive Gateway to <span style="color:var(--gold)">First-class</span> Journey</p>
+            <div class="quote-strip" style="margin-top:40px">
+              <p class="quote-text">"Flight606 is the only Airline where the journey becomes your destination"</p>
+              <p class="quote-author">— Manny Paksiu</p>
+            </div>
+          </div>
+          <div>
+            <div class="auth-card">
+              <p class="auth-card-tag">Welcome back</p>
+              <h2 class="auth-card-title">Login to your <span>account</span></h2>
+
+              <div id="login-error" class="alert alert-error hidden">
+                Sorry, we don't recognize that email or password. Please try again.
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">E-Mail</label>
+                <input type="email" id="login-email" class="form-input" placeholder="example@email.com">
+                <p class="error-msg hidden" id="login-email-err">Sorry, we don't recognize this email.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <div class="form-input-wrap">
+                  <input type="password" id="login-pass" class="form-input" value="••••••••••" onfocus="if(this.value==='••••••••••')this.value=''">
+                  <span class="input-icon">
+                    <span onclick="togglePass('login-pass',this)" style="cursor:pointer">👁</span>
+                    <span class="check">✓</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-row-inline">
+                <label class="checkbox-label"><input type="checkbox"> Remember me</label>
+                <a href="#" class="forgot-link">Forgot password?</a>
+              </div>
+
+              <button class="auth-btn" onclick="handleLogin()">Login now</button>
+
+              <button class="oauth-btn"><span>🔵</span> Continue with Google</button>
+              <button class="oauth-btn"><span>🍎</span> Continue with Apple</button>
+
+              <p class="auth-switch">Don't have an account? <a href="#" onclick="showPage('signup');return false;">Sign Up</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer (compact) -->
+      <footer style="padding:24px 48px">
+        <div class="footer-bottom" style="border-top:none;padding-top:0">
+          <div class="footer-legal">
+            <a href="#">Legal</a><a href="#">Privacy</a><a href="#">Accessibility</a>
+            <a href="#">Terms and conditions</a><a href="#">Sales and Service Tax</a>
+            <a href="#">Philippines e-Invoice</a>
+          </div>
+          <span class="footer-copy">© Batch 606</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+       SIGN UP PAGE
+  ══════════════════════════════════════ -->
+  <div id="page-signup" class="page">
+    <div class="hero-bg">
+      <div class="auth-page">
+        <div class="auth-content">
+          <div class="auth-left">
+            <p class="home-tagline">Flight 606 · Luxury Redefined</p>
+            <h1 class="home-title" style="margin-bottom:16px">
+              Experience the<br><em>Art of Travel</em>
+            </h1>
+            <p class="home-subtitle">Crafted for the <span style="color:var(--gold)">Modern Traveler</span></p>
+            <div class="quote-strip" style="margin-top:40px">
+              <p class="quote-text">"Flight606 is the only Airline where the journey becomes your destination"</p>
+              <p class="quote-author">— Manny Paksiu</p>
+            </div>
+          </div>
+          <div>
+            <div class="auth-card">
+              <p class="auth-card-tag">Welcome to Flight606</p>
+              <h2 class="auth-card-title">Create <span>account</span></h2>
+
+              <div id="signup-success" class="alert alert-success hidden">
+                Account created! Redirecting to login…
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First name</label>
+                  <input type="text" id="su-fname" class="form-input" placeholder="first name">
+                  <p class="error-msg hidden" id="su-fname-err">First name is required.</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Last name</label>
+                  <input type="text" id="su-lname" class="form-input" placeholder="last name">
+                  <p class="error-msg hidden" id="su-lname-err">Last name is required.</p>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">E-Mail</label>
+                  <input type="email" id="su-email" class="form-input" placeholder="your.email@mail.com">
+                  <p class="error-msg hidden" id="su-email-err">Valid email required.</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Date of birth (MM/DD/YY)</label>
+                  <input type="date" id="su-dob" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Password</label>
+                  <div class="form-input-wrap">
+                    <input type="password" id="su-pass" class="form-input" placeholder="password">
+                    <span class="input-icon" onclick="togglePass('su-pass',this)" style="cursor:pointer">👁</span>
+                  </div>
+                  <p class="error-msg hidden" id="su-pass-err">Password must be at least 8 characters.</p>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Confirm password</label>
+                  <div class="form-input-wrap">
+                    <input type="password" id="su-cpass" class="form-input" placeholder="••••••••••">
+                    <span class="input-icon" onclick="togglePass('su-cpass',this)" style="cursor:pointer">👁</span>
+                  </div>
+                  <p class="error-msg hidden" id="su-cpass-err">Passwords do not match.</p>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:10px">
+                <label class="checkbox-label"><input type="checkbox" id="su-remember"> Remember me</label>
+              </div>
+              <div class="form-group" style="margin-bottom:20px">
+                <label class="checkbox-label terms-label">
+                  <input type="checkbox" id="su-terms">
+                  I agree to all the <a href="#">Terms</a> and <a href="#">Privacy policy</a>
+                </label>
+                <p class="error-msg hidden" id="su-terms-err">You must agree to the terms.</p>
+              </div>
+
+              <button class="auth-btn" onclick="handleSignup()">Create Account</button>
+
+              <button class="oauth-btn"><span>🔵</span> Continue with Google</button>
+              <button class="oauth-btn"><span>🍎</span> Continue with Apple</button>
+
+              <p class="auth-switch">Already have an account? <a href="#" onclick="showPage('login');return false;">Log In</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer style="padding:24px 48px">
+        <div class="footer-bottom" style="border-top:none;padding-top:0">
+          <div class="footer-legal">
+            <a href="#">Legal</a><a href="#">Privacy</a><a href="#">Accessibility</a>
+            <a href="#">Terms and conditions</a><a href="#">Sales and Service Tax</a>
+            <a href="#">Philippines e-Invoice</a>
+          </div>
+          <span class="footer-copy">© Batch 606</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
