@@ -1,0 +1,19 @@
+.page-login {
+  font-family: var(--font-sans);
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Base style for contact page */
+.page-contact {
+  font-family: var(--font-sans);
+  background-color: #fafafa;
+  color: #333;
+  margin: 0;
+  padding-top: 100px; /* Offset for fixed navbar */
+}
+
+.site-footer {
+  background: var(--color-black);
+  padding: 3rem 0 1.5rem;
+}

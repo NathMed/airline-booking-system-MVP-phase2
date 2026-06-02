@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight606 — Contact Us</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link href="css/variables.css" rel="stylesheet">
+  <link href="css/layout.css" rel="stylesheet">
+  <link href="css/components.css" rel="stylesheet">
+  <link href="css/contact.css" rel="stylesheet">
+</head>
+<body class="page-contact">
+
+  <header class="site-header solid-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4 navbar-shell">
+        <a class="navbar-brand" href="#">FLIGHT606</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav navbar-nav--main gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#">Plan Trip</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Travel Info</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Corporate Travel</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Travel Services</a></li>
+          </ul>
+          <ul class="navbar-nav navbar-nav--utilities align-items-lg-center gap-lg-3">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-1" href="#">
+                <i class="bi bi-flag-fill"></i> EN
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center gap-1" href="#">
+                <i class="bi bi-question-circle"></i> AskPH
+              </a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="Search"><i class="bi bi-search"></i></a></li>
+            <li class="nav-item"><a class="nav-link" href="#" aria-label="Account"><i class="bi bi-person-circle"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-section">
+    <div class="container">
+      <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>Any question or remarks? Just write us a message!</p>
+      </div>
+
+      <div class="contact-card">
+        <!-- Left Panel -->
+        <div class="contact-info-panel">
+          <div class="decor-circle-large"></div>
+          <div class="decor-circle-small"></div>
+          
+          <div style="z-index: 2;">
+            <h2>Contact Information</h2>
+            <p class="subtitle">Say something to start a live chat!</p>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <i class="fas fa-phone-volume"></i>
+                <span>+1 012 3456 789</span>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fas fa-envelope"></i>
+                <span>demo@gmail.com</span>
+              </div>
+              <div class="contact-detail-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>132 Dartmouth Street Boston,<br>Massachusetts 02156 United States</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="#" class="social-circle" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-circle" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-circle" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Panel (Form) -->
+        <div class="contact-form-panel">
+          <form action="#" method="POST" novalidate>
+            <div class="row">
+              <div class="col-md-6 form-group-custom">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control-line" placeholder="">
+              </div>
+              <div class="col-md-6 form-group-custom">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control-line" placeholder="Doe">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 form-group-custom">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control-line" placeholder="">
+              </div>
+              <div class="col-md-6 form-group-custom">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control-line" placeholder="+1 012 3456 789">
+              </div>
+            </div>
+
+            <div class="subject-selection">
+              <p>Select Subject?</p>
+              <div class="radio-group">
+                <div class="custom-radio">
+                  <input type="radio" id="subject1" name="subject" checked>
+                  <label for="subject1">General Inquiry</label>
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="subject2" name="subject">
+                  <label for="subject2">General Inquiry</label>
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="subject3" name="subject">
+                  <label for="subject3">General Inquiry</label>
+                </div>
+                <div class="custom-radio">
+                  <input type="radio" id="subject4" name="subject">
+                  <label for="subject4">General Inquiry</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group-custom">
+              <label for="message">Message</label>
+              <input type="text" id="message" class="form-control-line" placeholder="Write your message..">
+            </div>
+
+            <div class="submit-area">
+              <!-- Using FA icon for plane inside button to simulate graphic loosely -->
+              <button type="submit" class="btn-send">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h6>Other Offerings</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">PHplus</a></li>
+            <li><a href="#">Temptations</a></li>
+            <li><a href="#">Zuitt Academy <i class="bi bi-box-arrow-up-right"></i></a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6>About Us</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Philippines Aviation Group</a></li>
+            <li><a href="#">Philippines Airlines Affiliate</a></li>
+            <li><a href="#">Corporate Governance</a></li>
+            <li><a href="#">Leadership</a></li>
+            <li><a href="#">Awards</a></li>
+            <li><a href="#">Join us</a></li>
+            <li><a href="#">MH Media Centre</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h6>Corporate Travel</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">PHcorporate</a></li>
+            <li><a href="#">PHcorporate SME</a></li>
+            <li><a href="#">PHcorporate MARINE</a></li>
+            <li><a href="#">PHcorporate EVENTS</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="mb-4">
+            <h6>AskMH</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">FAQ <i class="bi bi-box-arrow-up-right"></i></a></li>
+              <li><a href="#">Contact Details</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="subscribe-label mb-2">Subscribe to our offers</p>
+            <div class="input-group input-group-sm mb-4">
+              <button class="btn btn-subscribe" type="button">Subscribe</button>
+            </div>
+            <p class="connect-label text-uppercase mb-2">Connect with us</p>
+            <div class="d-flex gap-3 social-icons">
+              <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25 my-4">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 footer-legal">
+        <a href="#">Legal</a>
+        <a href="#">Privacy</a>
+        <a href="#">Accessibility</a>
+        <a href="#">Terms and conditions</a>
+        <a href="#">Sales and Service Tax</a>
+        <a href="#">Philippines e-Invoice</a>
+      </div>
+      <div class="text-center mt-3">
+        <span class="footer-copyright">© BATCH 606</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

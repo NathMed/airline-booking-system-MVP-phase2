@@ -89,6 +89,36 @@ initValidatedField({
 });
 
 initPasswordToggle();
+initScrollNavbar();
+
+function initScrollNavbar() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const scrollRange = parseInt(
+    getComputedStyle(document.documentElement).getPropertyValue("--nav-scroll-range") || "160",
+    10,
+  ) || 160;
+  let ticking = false;
+
+  const updateNavbar = () => {
+    const progress = Math.min(Math.max(window.scrollY / scrollRange, 0), 1);
+    header.style.setProperty("--nav-scroll-progress", progress.toFixed(4));
+    header.classList.toggle("is-scrolled", progress > 0.05);
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      requestAnimationFrame(updateNavbar);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+  updateNavbar();
+}
 
 document.querySelector(".login-form")?.addEventListener("submit", (event) => {
   event.preventDefault();
