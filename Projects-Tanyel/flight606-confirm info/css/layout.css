@@ -1,0 +1,83 @@
+
+/* ── Page system ── */
+.page        { display: none; min-height: 100vh; }
+.page.active { display: block; }
+
+/* ── Hero background ── */
+.hero-bg {
+  position: relative;
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(10,8,6,.6) 0%, rgba(10,8,6,.32) 42%, rgba(10,8,6,.68) 100%),
+    url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1800&q=80') center/cover no-repeat;
+  transition: background-image .8s ease;
+}
+
+/* ── Hero section ── */
+.home-hero {
+  min-height: 100vh;
+  padding: 130px 20px 0;
+}
+
+/* ── Slider row ── */
+.slider-row {
+  margin-bottom: 30px;
+}
+
+/* ── Footer grid ── */
+.foot-btm {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+/* ── Auth page ── */
+.auth-page {
+  min-height: 100vh;
+  padding: 88px 48px 56px;
+}
+.auth-content {
+  max-width: 1200px;
+}
+
+/* ── Animations ── */
+@keyframes fu {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fu  { animation: fu .72s ease both; }
+.fu1 { animation: fu .72s ease .12s both; }
+.fu2 { animation: fu .72s ease .24s both; }
+.fu3 { animation: fu .72s ease .36s both; }
+.fu4 { animation: fu .72s ease .48s both; }
+
+/* ── Utilities ── */
+.hidden { display: none !important; }
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 960px) {
+  nav { padding: 0 18px; }
+  .nav-links,
+  .nav-right .nav-btn { display: none; }
+  .hamburger { display: flex; }
+
+  section { padding: 52px 18px; }
+  .home-hero { padding: 105px 14px 0; }
+
+  /* Booking widget stacks vertically */
+  .w-fields { grid-template-columns: 1fr; }
+  .w-field  { border-right: none; border-bottom: 1px solid rgba(255,255,255,.07); }
+  .w-field:last-child { border-bottom: none; }
+  .about-visual   { display: none; }
+  .foot-btm       { flex-direction: column; align-items: flex-start; }
+  .auth-left-col  { display: none; }
+  .auth-page      { padding: 88px 16px 50px; }
+  .w-header, .w-tabs { flex-wrap: wrap; }
+  .book-now           { width: 100%; }
+}
+
+@media (max-width: 500px) {
+
+  .hero-title { font-size: 2.4rem; }
+}
