@@ -1,0 +1,33 @@
+
+/* ── Design tokens ── */
+:root {
+  --gold:       #C9973A;
+  --gold-light: #E8B84B;
+  --dark:       #0A0806;
+  --dark-2:     #12100D;
+  --dark-3:     #1C1814;
+  --text:       #F5F0E8;
+  --muted:      #9C9080;
+  --border:     rgba(201,151,58,.22);
+  --error:      #E05252;
+  --success:    #4CAF50;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+}
