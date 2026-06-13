@@ -53,7 +53,7 @@
           <a class="btn-gold" href="#" onclick="showPage('signup'); return false;">Sign Up</a>
         </div>
 
-        <div class="nav-actions d-flex align-items-center gap-2" id="nav-logged-in" style="display:none!important">
+        <div class="nav-actions d-flex align-items-center gap-2 ms-3" id="nav-logged-in" style="display:none!important">
           <div class="profile-dropdown" id="profileDropdown">
             <button class="profile-trigger" onclick="toggleProfileMenu()">
               <i class="bi bi-person-circle"></i>
@@ -449,8 +449,20 @@
         </div>
       </div>
 
-      <div class="page-body">
+      <div class="page-body mt-5">
         <div class="container">
+          
+          <!-- Breadcrumbs -->
+          <nav class="theme-breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="#" onclick="goNav(this,'home')">Home</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Flights
+              </li>
+            </ol>
+          </nav>
+
           <!-- Search bar -->
           <div class="sf-search-bar">
             <div class="d-flex gap-4 mb-3 flex-wrap">
@@ -650,9 +662,23 @@
       <div class="page-body pt-5">
         <div class="container">
           <div class="booking-layout">
-
             <!-- Booking form -->
             <div class="booking-form">
+
+              <!-- Breadcrumbs -->
+              <nav class="theme-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item">
+                    <a href="#" onclick="goNav(this,'home')">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="#" onclick="goNav(this,'search-flights')">Flights</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">Booking Form
+                  </li>
+                </ol>
+              </nav>
+
               <!-- Flight summary -->
               <div class="flight-summary-strip">
                 <span class="fs-label">Selected Flights</span>
@@ -814,7 +840,25 @@
         <div class="container" style="max-width: 800px;">
           <h1 class="confirm-headline">Confirm<br><em class="gold">information</em></h1>
 
-          <div class="confirm-section">
+          <!-- Breadcrumbs -->
+          <nav class="theme-breadcrumb" aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                  <li class="breadcrumb-item">
+                      <a href="#" onclick="goNav(this,'home')">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                      <a href="#" onclick="goNav(this,'search-flights')">Flights</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                      <a href="#" onclick="goNav(this,'book-flight')">Booking Form</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                      Confirm Payment
+                  </li>
+              </ol>
+          </nav>
+
+          <div class="confirm-section mt-3">
             <div class="confirm-row">
               <div class="confirm-pax"><div class="confirm-pax-icon"><i class="bi bi-person"></i></div><div class="confirm-pax-name">Adult 1 – Passenger One</div></div>
               <div class="confirm-detail"><i class="bi bi-luggage"></i><span>Hand and hold baggage</span></div>
@@ -866,7 +910,7 @@
         <div class="success-actions">
           <button class="btn-gold-full" onclick="goNav(null,'home')">Back to Home</button>
         </div>
-        <div class="success-actions">
+        <div>
           <button class="btn-gold-full" onclick="goNav(null,'profile')">View My Bookings</button>
         </div>
       </div>

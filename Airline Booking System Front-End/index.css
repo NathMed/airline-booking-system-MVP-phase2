@@ -256,6 +256,43 @@ h1, h2, h3, h4, h5, h6 {
 
 .pm-sep { height: 1px; background: var(--border); margin: 4px 0; }
 
+/* Breadcrumbs */
+.theme-breadcrumb {
+    background: rgba(201,154,58,.08);
+    border: 1px solid rgba(201,154,58,.35);
+    border-radius: 4px;
+    padding: 12px 18px;
+}
+
+.theme-breadcrumb .breadcrumb {
+    --bs-breadcrumb-divider-color: #c99a3a;
+    --bs-breadcrumb-item-active-color: #f4d27a;
+    margin: 0;
+}
+
+.theme-breadcrumb .breadcrumb-item,
+.theme-breadcrumb .breadcrumb-item a {
+    color: #b89b5e;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.theme-breadcrumb .breadcrumb-item a:hover {
+    color: #f4d27a;
+}
+
+.theme-breadcrumb .breadcrumb-item.active {
+    color: #f4d27a;
+    font-weight: 600;
+}
+
+.theme-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: #c99a3a;
+}
+
+
 /* ════════════════════════════════════════════════════
    HERO SECTION
 ════════════════════════════════════════════════════ */
